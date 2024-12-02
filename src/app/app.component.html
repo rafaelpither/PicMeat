@@ -1,19 +1,3 @@
-<nav *ngIf="mostraNavbar">
-    <a href="https://picpay.com" id="picpay" target="_blank">
-        <h1>PicPay</h1>
-    </a>
-    <div>
-        <a routerLink="/"><strong>Home</strong></a>
-        <a routerLink="/listaCarne"><strong>Loja</strong></a>
-    </div>
-    <div id="logCad" *ngIf="!logado">
-        <a routerLink="/login"><button>Entrar</button></a>
-        <a routerLink="/cadastro"><button>Cadastrar-se</button></a>
-    </div>
-    <div id="logCad" *ngIf="logado">
-        <h2>{{ usuario?.nome || 'está null' }}</h2>
-        <h2>{{ usuario?.sobrenome || 'está null'}}</h2>
-        <button (click)="teste()">teste</button>
-    </div>
-</nav>
+<app-deslog *ngIf="!logado"></app-deslog>
+<app-onlog *ngIf="logado"></app-onlog>
 <router-outlet></router-outlet>

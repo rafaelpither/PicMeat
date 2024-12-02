@@ -14,7 +14,9 @@ import { LoginComponent } from './pages/loginCad/login/login.component';
 import { CadastroComponent } from './pages/loginCad/cadastro/cadastro.component';
 import { CadErrorComponent } from './error/loginCad/cadastro/cad-error/cad-error.component';
 import { DiffSenhaComponent } from './error/loginCad/cadastro/diff-senha/diff-senha.component';
-import { NotFoundComponent } from './error/loginCad/login/not-found/not-found.component'
+import { NotFoundComponent } from './error/loginCad/login/not-found/not-found.component';
+import { DeslogComponent } from './components/listaCarne/navbar/deslog/deslog.component';
+import { OnlogComponent } from './components/listaCarne/navbar/onlog/onlog.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { NotFoundComponent } from './error/loginCad/login/not-found/not-found.co
     CadastroComponent,
     CadErrorComponent,
     DiffSenhaComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DeslogComponent,
+    OnlogComponent
   ],
   imports: [
     BrowserModule,

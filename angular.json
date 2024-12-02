@@ -78,6 +78,9 @@
             },
             "development": {
               "buildTarget": "exercicioCarne:build:development"
+            },
+            "options": {
+              "hmr": true
             }
           },
           "defaultConfiguration": "development"
