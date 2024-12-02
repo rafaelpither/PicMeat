@@ -1,0 +1,11 @@
+<section ngClass="cadastroProd">
+    <h1 ngClass="titulo">CADASTRAR PRODUTO</h1>
+    <form>
+        <input (keyup)="nameAdd()" (change)="nameAdd()" type="text" placeholder="Nome" name="addname" id="addname" #addname required>
+        <input (keyup)="pesoAdd()" (change)="pesoAdd()" type="number" placeholder="Peso" name="addpeso" id="addpeso" #addpeso required>
+        <input (keyup)="precoAdd()" (change)="precoAdd()" type="number" placeholder="Preco" name="addpreco" id="addpreco" #addpreco required>
+        <input (keyup)="imgAdd()" (change)="imgAdd()" type="text" placeholder="Imagem (URL internet)" name="addimg" id="addimg" #addimg required>
+    </form>
+    <a routerLink="/listaCarne"><button (click)="addCarne()" ngClass="btEnviar">Cadastrar</button></a>
+    <a routerLink="/listaCarne"><button ngClass="btVerm">Cancelar</button></a>
+</section>

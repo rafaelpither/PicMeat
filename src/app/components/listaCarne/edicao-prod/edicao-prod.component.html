@@ -1,0 +1,17 @@
+<section>
+    <div ngClass="editar">
+        <h1 ngClass="titulo">EDIÇÃO</h1>
+        <br>
+        <div ngClass="cadastroProd">
+            <form>
+                <input (keyup)="nameAdd()" (change)="nameAdd()" type="text" placeholder="Nome" name="addname" id="addname" [value]="nomeEdicao" #addname required>
+                <input (keyup)="pesoAdd()" (change)="pesoAdd()" type="number" placeholder="Peso" name="addpeso" id="addpeso" [value]="pesoEdicao" #addpeso required>
+                <input (keyup)="precoAdd()" (change)="precoAdd()" type="number" placeholder="Preco" name="addpreco" id="addpreco" [value]="precoEdicao" #addpreco required>
+                <input (keyup)="imgAdd()" (change)="imgAdd()" type="text" placeholder="Imagem (URL internet)" name="addimg" id="addimg" [value]="imgEdicao" #addimg required>
+            </form>
+        </div>
+        <br>
+        <a routerLink="/listaCarne"><button (click)="putCarne()" ngClass="btEnviar">Confirmar Alteração</button></a>
+        <a routerLink="/listaCarne"><button ngClass="btVerm">Cancelar</button></a>
+    </div>
+</section>

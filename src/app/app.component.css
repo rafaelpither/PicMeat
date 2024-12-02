@@ -1,0 +1,75 @@
+*{
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #EFF0E8;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 13vh;
+    border-bottom: #11C76F solid 3px;
+    div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #11C76F;
+        text-decoration: none;
+        height: 10vh;
+        transition: 0.3s ease;
+        font-size: 21px;
+    }
+    a:hover{
+        color: #000000;
+    }
+    #picpay{
+        h1{
+            transition: 0.5s ease;
+        }
+    }
+    #picpay:hover{
+
+        h1{
+            color: #000000;
+        }
+    }
+
+    h1{
+        color: #238662;
+        margin-left: 40px;
+    }
+
+    #logCad{
+        button{
+            min-width: 50px;
+            max-width: 150px;
+
+            font-size: 18px;
+
+            padding: 2px;
+
+            background-color: transparent;
+
+            border: solid 2px #11C76F;
+            border-radius: 4px;
+
+            transition: 0.3s ease;
+        }
+        button:hover{
+            color: #EFF0E8;
+            background-color: #11C76F;
+            border-color: transparent;
+        }
+    }
+}

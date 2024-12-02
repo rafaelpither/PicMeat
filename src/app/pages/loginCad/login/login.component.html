@@ -1,0 +1,9 @@
+<section ngClass="login">
+    <h1 ngClass="titulo">ENTRAR</h1>
+    <form>
+        <input type="email" (keyup)="putEmail()" (change)="putEmail()" placeholder="E-mail" #addemail required>
+        <input type="password" (keyup)="putSenha()" (change)="putSenha()" placeholder="Senha" #addsenha required>
+    </form>
+    <button ngClass="btEnviar" (click)="getConta()">Entrar</button>
+    <a routerLink="/"><button ngClass="btVerm">Cancelar</button></a>
+</section>

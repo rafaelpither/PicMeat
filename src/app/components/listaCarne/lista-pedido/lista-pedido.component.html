@@ -1,0 +1,19 @@
+<section ngClass="pedidos">
+    <ul *ngIf="pedidos.length > 0; else semPedido">
+        <a routerLink="/listaCarne"><button ngClass="btEnviar">Voltar</button></a>
+        <li *ngFor="let pedido of pedidos">
+            <div>
+                <h4>Pedido #{{ pedido.id_pedido }}</h4>
+                <h2>Produto: {{ pedido.nome_prod }}</h2>
+                <h3>Quantidade: {{ pedido.quantidade }}</h3>
+                <h2>Total: R${{ pedido.total }}</h2>
+                <h4>Forma de pagamento: {{ pedido.pagamento }}</h4>
+            </div>
+        </li>
+    </ul>
+
+    <ng-template #semPedido>
+        <a routerLink="/listaCarne"><button ngClass="btEnviar">Voltar</button></a>
+        <h1>SEM PEDIDOS</h1>
+    </ng-template>
+</section>

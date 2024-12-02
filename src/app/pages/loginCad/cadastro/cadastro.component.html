@@ -1,0 +1,12 @@
+<section ngClass="cadastro">
+    <h1 ngClass="titulo">CADASTRE-SE</h1>
+    <form>
+        <input type="text" placeholder="Nome" (keyup)="putNome()" (change)="putNome()" #addnome required>
+        <input type="text" placeholder="Sobrenome" (keyup)="putSobrenome()" (change)="putSobrenome()" #addsobrenome required>
+        <input type="email" placeholder="E-mail" id="email" (keyup)="putEmail()" (change)="putEmail()" #addemail required>
+        <input type="password" placeholder="Senha" id="senha" (keyup)="putSenha()" (change)="putSenha()" #addsenha required>
+        <input type="password" placeholder="Confirmar senha" (keyup)="putConfSenha()" (change)="putConfSenha()" #confirmasenha required>
+    </form>
+    <button ngClass="btEnviar" (click)="postUser()">Cadastrar</button>
+    <a routerLink="/"><button ngClass="btVerm">Cancelar</button></a>
+</section>

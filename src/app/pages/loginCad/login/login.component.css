@@ -1,0 +1,97 @@
+/* CSS PADRÃO */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70vh;
+    padding: 50px;
+}
+
+/* BOTÕES */
+.btVerde{
+    margin-top: 10px;
+    border: none;
+    background-color: #11C76F;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+.btVerde:hover{
+    background-color: transparent;
+    color: #11C76F;
+}
+.btVerde:active{
+    background-color: transparent;
+    color: #000000;
+}
+
+.btVerm{
+    margin-top: 10px;
+    border: none;
+    background-color: #FF0000;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+.btVerm:hover{
+    background-color: transparent;
+    color: #FF0000;
+}
+.btVerm:active{
+    background-color: transparent;
+    color: #000000;
+}
+
+.btEnviar{
+    margin-top: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #11C76F;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+.btEnviar:hover{
+    background-color: transparent;
+    color: #FFFFFF;
+}
+.btEnviar:active{
+    background-color: transparent;
+    color: #000000;
+}
+
+.titulo{
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+/* CSS CADASTRO */
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    input{
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    input:focus{
+        outline: none;
+    }
+}

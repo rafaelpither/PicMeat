@@ -1,0 +1,19 @@
+<section ngClass="comprar">
+    <h1 class="titulo">COMPRAR PRODUTO</h1>
+    <h2>Produto: {{ nomeCompra }}</h2>
+    <h2>Preço: {{ precoCompra }}</h2>
+    <form>
+        <input (keyup)="qtdAdd()" (change)="qtdAdd()" type="number" placeholder="Quantidade" name="addqtd" id="addqtd" #addqtd required min="1" max="300">
+        <select name="pgto" id="pgto" (change)="pgtoAdd()" (change)="qtdAdd()" #pgto required>
+            <option value="selectPedido" hidden>Selecione a forma de pagamento</option>
+            <option value="PicPay">PicPay (20% de taxa)</option>
+            <option value="Nubank">Nubank (70% de desconto)</option>
+            <option value="PIX">PIX</option>
+            <option value="Cartão">Cartão de Crédito/Débito</option>
+            <option value="Vale alimentação">Vale alimentação</option>
+        </select>
+    </form>
+    <h2>Valor total: R${{ valorTotal }}</h2>
+    <a routerLink="/listaCarne"><button (click)="addPedidos()" (click)="pgtoNull()" ngClass="btEnviar">Pedir</button></a>
+    <a routerLink="/listaCarne"><button (click)="pgtoNull()" ngClass="btVerm">Cancelar</button></a>
+</section>

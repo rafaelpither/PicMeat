@@ -1,0 +1,39 @@
+<div *ngIf="listaCan" id="compras">
+    <a routerLink="/listaPedido"><button ngClass="btEnviar">Pedidos</button></a>
+</div>
+<section>
+    <!-- CADASTRO DE PRODUTOS -->
+
+    <!-- EDIÇÃO DE PRODUTOS -->
+
+    <!-- COMPRA DE PRODUTOS -->
+
+    <!-- LISTA DE PEDIDOS -->
+
+    <!-- LISTA DE PRODUTOS -->
+    <div *ngIf="listaCan" ngClass="itens">
+        <a routerLink="/cadastroProd"><button id="cadastro">Cadastrar produto</button></a>
+        <router-outlet></router-outlet>
+        <ul *ngIf="carnes.length > 0; else semProduto">
+            <li *ngFor="let carne of carnes">
+                <img src={{carne.img}} alt="Imagem de {{ carne.nome }}">
+                <div>
+                    <h1>{{ carne.nome }}</h1>
+                    <h4>{{ carne.peso }}kg/Preço</h4>
+                    <h2>R${{ carne.preco }}</h2>
+                    <a [routerLink]="['/edicaoProd', carne.id, carne.nome, carne.peso, carne.preco, carne.img]"><button ngClass="btVerde">Editar</button></a>
+                    <button (click)="removeCarne(carne)" ngClass="btVerm">Excluir</button>
+                </div>
+                <a [routerLink]="['/compraProd', carne.id, carne.nome, carne.preco]"><button class="btVerde">Comprar</button></a>
+            </li>
+        </ul>
+
+        <ng-template #semProduto>
+            <a routerLink="/">
+                <button ngClass="btEnviar
+                6 ">Voltar</button>
+            </a>
+            <h1>SEM PRODUTOS</h1>
+        </ng-template>
+    </div>
+</section>
