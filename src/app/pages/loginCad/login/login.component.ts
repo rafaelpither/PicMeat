@@ -15,8 +15,6 @@ export class LoginComponent {
   @ViewChild ('addemail') addEmail!: ElementRef;
   @ViewChild ('addsenha') addSenha!: ElementRef;
 
-  logado: boolean = false;
-
   email!: string;
   senha!: string;
 
@@ -35,13 +33,10 @@ export class LoginComponent {
     this.loginService.get(this.email, this.senha).subscribe((user) => {
       if(Object.keys(user).length > 0){
         this.usuario = user;
-        this.logado = true;
         this.loginService.setUsuario(this.usuario);
-        this.loginService.setLogado(this.logado);
         this.router.navigate(['/']);
       }
       else{
-        this.loginService.setLogado(this.logado);
         this.router.navigate(['/naoEnc'])
       }
     });
